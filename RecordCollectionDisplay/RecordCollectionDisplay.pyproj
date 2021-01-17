@@ -21,6 +21,15 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="AuthScreen.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LogScreen.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="RecordCollectionDisplay.py" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
