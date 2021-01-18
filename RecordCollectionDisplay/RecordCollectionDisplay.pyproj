@@ -24,6 +24,9 @@
     <Compile Include="AuthScreen.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Entry.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="LogScreen.py">
       <SubType>Code</SubType>
     </Compile>

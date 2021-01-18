@@ -26,8 +26,9 @@ def main():
    authTokens = oauth.Token(key = tokens[0], secret = tokens[1])
    consumer = oauth.Consumer(consumerKey, consumerSecret)
    client = oauth.Client(consumer, authTokens)
-   resp, content = client.request('https://api.discogs.com/users/' + userName + '/collection/folders/0/releases?sort=artist', headers={'User-Agent': userAgent})
-   print(content)
+   RecordScreen = MainWindow.MainWindow(client, userName)
+   RecordScreen.start()
+   
 
 if __name__ == "__main__":
     main()
