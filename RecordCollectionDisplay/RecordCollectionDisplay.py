@@ -3,6 +3,7 @@ import LogScreen
 import oauth2 as oauth
 import os.path
 import MainWindow
+import tkinter as tk
 
 tokenFile = 'token.txt'
 userFile = 'user.txt'
@@ -26,8 +27,10 @@ def main():
    authTokens = oauth.Token(key = tokens[0], secret = tokens[1])
    consumer = oauth.Consumer(consumerKey, consumerSecret)
    client = oauth.Client(consumer, authTokens)
-   RecordScreen = MainWindow.MainWindow(client, userName)
-   RecordScreen.start()
+   root = tk.Tk()
+   RecordScreen = MainWindow.MainWindow(root, client, userName)
+   RecordScreen.pack(side="top", fill="both", expand=True)
+   root.mainloop()
    
 
 if __name__ == "__main__":
